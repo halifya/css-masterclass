@@ -1,6 +1,12 @@
 <style>
   body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  button {
+    font-family: "Lato", sans-serif;
   }
   .bg-gray-900 {
     background-color: #121826;
@@ -23,6 +29,58 @@
   .flex {
     display: flex;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .m-8 {
+    margin: 8px;
+  }
+  .p-8 {
+    padding: 8px;
+  }
+  .py-8 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .px-16 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .py-12 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .px-28 {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .no-underline {
+    text-decoration: none;
+  }
+  .bg-brand-teal {
+    background-color: #539d98;
+  }
+  .border-none {
+    border: none;
+  }
+  .rounder-full {
+    border-radius: 9999px;
+  }
+  .font-bold {
+    font-weight: bold;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .text-sm {
+    font-size: 14px;
+  }
+  .letter-spacing-1 {
+    letter-spacing: 1px;
+  }
 </style>
 
 <!DOCTYPE html>
@@ -32,19 +90,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Masterclass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="bg-gray-900">
-      <div>
-        <img src="" alt="" />
-        <a href="" class="text-white flex">Pricing</a>
-        <a href="" class="text-white block">Courses</a>
-        <a href="" class="text-white block">Blog</a>
-        <a href="" class="text-white block">Forum</a>
+    <header class="bg-gray-900 flex justify-between" style="padding: 18px 12px">
+      <div class="flex justify-between items-center">
+        <img src="./logo.svg" alt="" style="margin-right: 50px" />
+        <a href="" class="text-white py-8 px-16 no-underline">Pricing</a>
+        <a href="" class="text-white py-8 px-16 no-underline">Courses</a>
+        <a href="" class="text-white py-8 px-16 no-underline">Blog</a>
+        <a href="" class="text-white py-8 px-16 no-underline">Forum</a>
       </div>
-      <div>
-        <a href="" class="text-white block">Login</a>
-        <button>Sign Up</button>
+      <div class="flex items-center">
+        <a
+          href=""
+          class="text-white block py-8 px-16 no-underline"
+          style="margin-right: 28px"
+          >Login</a
+        >
+        <button
+          class="bg-brand-teal text-white border-none rounder-full py-12 px-28 font-bold text-sm uppercase text-sm letter-spacing-1"
+        >
+          Sign Up
+        </button>
       </div>
     </header>
     <body>
