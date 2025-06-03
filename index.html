@@ -53,6 +53,10 @@
     padding-top: 12px;
     padding-bottom: 12px;
   }
+  .py-18 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
   .px-28 {
     padding-left: 28px;
     padding-right: 28px;
@@ -81,6 +85,18 @@
   .letter-spacing-1 {
     letter-spacing: 1px;
   }
+  .w-full {
+    width: 100%;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .relative {
+    position: relative;
+  }
+  .z-10 {
+    z-index: 10;
+  }
 </style>
 
 <!DOCTYPE html>
@@ -98,7 +114,10 @@
     />
   </head>
   <body>
-    <header class="bg-gray-900 flex justify-between" style="padding: 18px 12px">
+    <header
+      class="flex justify-between py-18 relative z-10"
+      style="padding: 18px 12px"
+    >
       <div class="flex justify-between items-center">
         <img src="./logo.svg" alt="" style="margin-right: 50px" />
         <a href="" class="text-white py-8 px-16 no-underline">Pricing</a>
@@ -120,6 +139,9 @@
         </button>
       </div>
     </header>
+    <section class="relative" style="top: -79px">
+      <video src="./video/galaxy.mp4" autoplay muted loop class="w-full h-full" style="object-fit: cover;"></video>
+    </section>
     <body>
       <h1>hello world</h1>
     </body>
