@@ -8,6 +8,13 @@
   button {
     font-family: "Lato", sans-serif;
   }
+  h1 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+
   .bg-gray-900 {
     background-color: #121826;
   }
@@ -94,8 +101,23 @@
   .relative {
     position: relative;
   }
+  .object-cover {
+    object-fit: cover;
+  }
   .z-10 {
     z-index: 10;
+  }
+  .text-brand-teal {
+    color: #90cac7;
+  }
+  .text-brand-teal-dark {
+    color: #539d98;
+  }
+  .bg-white {
+    background-color: white;
+  }
+  .absolute {
+    position: absolute;
   }
 </style>
 
@@ -139,8 +161,37 @@
         </button>
       </div>
     </header>
-    <section class="relative" style="top: -79px">
-      <video src="./video/galaxy.mp4" autoplay muted loop class="w-full h-full" style="object-fit: cover;"></video>
+    <section class="relative">
+      <video
+        src="./video/galaxy.mp4"
+        autoplay
+        muted
+        loop
+        class="w-full object-cover absolute"
+        style="min-height: 689px; top: -79px"
+      ></video>
+      <div style="padding: 0 12px; padding-top: 100px">
+        <div class="z-10 absolute" style="max-width: 538px">
+          <h1 style="font-size: 60px" class="text-white">
+            Turbocharge your <br /><span class="text-brand-teal"
+              >development career</span
+            >
+          </h1>
+          <p
+            class="text-white"
+            style="max-width: 449px; font-size: 20px; margin-top: 30px"
+          >
+            Chris Courses provides students and professionals a college-level
+            web development education.
+          </p>
+          <button
+            style="margin-top: 30px; border-radius: 4px"
+            class="bg-white text-brand-teal-dark border-none py-12 px-28"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
     </section>
     <body>
       <h1>hello world</h1>
