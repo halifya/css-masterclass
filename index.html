@@ -119,6 +119,25 @@
   .absolute {
     position: absolute;
   }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text-16px {
+    font-size: 16px;
+  }
+  .text-36px {
+    font-size: 36px;
+  }
+  @media (min-width: 640px) {
+    .sm\:text-60px {
+      font-size: 60px;
+    }
+
+    .sm\:text-20px {
+      font-size: 20px;
+    }
+  }
 </style>
 
 <!DOCTYPE html>
@@ -137,8 +156,8 @@
   </head>
   <body>
     <header
-      class="flex justify-between py-18 relative z-10"
-      style="padding: 18px 12px"
+      class="flex justify-between py-18 relative z-10 mx-auto bg-blue"
+      style="padding: 18px 12px; max-width: 1200px"
     >
       <div class="flex justify-between items-center">
         <img src="./logo.svg" alt="" style="margin-right: 50px" />
@@ -170,16 +189,19 @@
         class="w-full object-cover absolute"
         style="min-height: 689px; top: -79px"
       ></video>
-      <div style="padding: 0 12px; padding-top: 100px">
-        <div class="z-10 absolute" style="max-width: 538px">
-          <h1 style="font-size: 60px" class="text-white">
+      <div
+        style="padding: 0 12px; padding-top: 100px; max-width: 1200px"
+        class="mx-auto"
+      >
+        <div class="z-10 absolute mx-auto" style="max-width: 538px">
+          <h1 class="text-white text-36px sm:text-60px">
             Turbocharge your <br /><span class="text-brand-teal"
               >development career</span
             >
           </h1>
           <p
-            class="text-white"
-            style="max-width: 449px; font-size: 20px; margin-top: 30px"
+            class="text-white text-16px sm:text-20px"
+            style="max-width: 449px; margin-top: 30px"
           >
             Chris Courses provides students and professionals a college-level
             web development education.
